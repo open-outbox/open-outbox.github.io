@@ -38,3 +38,13 @@ import { Card, CardGrid } from '@astrojs/starlight/components';
 		Built for modern operations. Native **OpenTelemetry** integration provides deep visibility into event latency and pipeline health, making it ready for complex, distributed environments.
 	</Card>
 </CardGrid>
+
+---
+## Performance by Design
+
+Open Outbox is engineered for minimal overhead. In our reference benchmarks:
+- **Sub-1ms** average query latency on tables with 10M+ records.
+- **Horizontal Scaling** tested with 20+ concurrent relay instances.
+- **Zero-Collision** event claiming under high-concurrency loads.
+
+[View Full Benchmark Report →](/benchmarks/)

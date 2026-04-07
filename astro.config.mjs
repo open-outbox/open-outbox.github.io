@@ -9,6 +9,8 @@ export default defineConfig({
 			title: 'Open Outbox',
 			social: [{ icon: 'github', label: 'GitHub', href: 'https://open-outbox.github.io' }],
 			sidebar: [
+				{ label: 'Home', link: '/' },
+  				{ label: 'Benchmarks', link: '/benchmarks/' },
 				{
 					label: 'The Specification',
 					autogenerate: { directory: 'spec' },
