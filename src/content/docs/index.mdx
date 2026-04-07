@@ -1,19 +1,18 @@
 ---
-title: Welcome to Starlight
-description: Get started building your docs site with Starlight.
-template: splash # Remove or comment out this line to display the site sidebar on this page.
+title: Open Outbox
+description: The open-source standard for reliable message delivery in distributed systems.
+template: splash
 hero:
-  tagline: Congrats on setting up a new Starlight project!
+  tagline: Solve the "Dual Write" problem. An atomic, scalable, and language-agnostic standard for high-concurrency event-driven architectures.
   image:
     file: ../../assets/houston.webp
   actions:
-    - text: Example Guide
-      link: /guides/example/
+    - text: Read the Spec
+      link: /spec/
       icon: right-arrow
-    - text: Read the Starlight docs
-      link: https://starlight.astro.build
-      icon: external
-      variant: minimal
+    - text: Implementation
+      link: /relay/
+      icon: right-arrow
 ---
 
 import { Card, CardGrid } from '@astrojs/starlight/components';
@@ -21,20 +20,16 @@ import { Card, CardGrid } from '@astrojs/starlight/components';
 ## Next steps
 
 <CardGrid stagger>
-	<Card title="Update content" icon="pencil">
-		Edit `src/content/docs/index.mdx` to see this page change.
+	<Card title="Language Agnostic" icon="document">
+		A formal specification for the Outbox pattern that can be implemented in Go, Python, Java, or any language with a database driver.
 	</Card>
-	<Card title="Change page layout" icon="document">
-		Delete `template: splash` in `src/content/docs/index.mdx` to display a
-		sidebar on this page.
+	<Card title="Database Atomic" icon="approve-check">
+		Ensure your state changes and events are committed in a single transaction. No more "ghost" messages or lost updates.
 	</Card>
-	<Card title="Add new content" icon="add-document">
-		Add Markdown or MDX files to `src/content/docs` to create new pages.
+	<Card title="High Throughput" icon="rocket">
+		Designed for high-concurrency environments using advanced database locking strategies like `SKIP LOCKED`.
 	</Card>
-	<Card title="Configure your site" icon="setting">
-		Edit your `sidebar` and other config in `astro.config.mjs`.
-	</Card>
-	<Card title="Read the docs" icon="open-book">
-		Learn more in [the Starlight Docs](https://starlight.astro.build/).
+	<Card title="Cloud Native" icon="setting">
+		Works with modern message brokers like Kafka, NATS, and RabbitMQ, and integrates with OpenTelemetry for full-stack tracing.
 	</Card>
 </CardGrid>

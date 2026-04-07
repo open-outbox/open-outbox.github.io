@@ -10,15 +10,12 @@ export default defineConfig({
 			social: [{ icon: 'github', label: 'GitHub', href: 'https://open-outbox.github.io' }],
 			sidebar: [
 				{
-					label: 'Guides',
-					items: [
-						// Each item here is one entry in the navigation menu.
-						{ label: 'Example Guide', slug: 'guides/example' },
-					],
+					label: 'The Specification',
+					autogenerate: { directory: 'spec' },
 				},
 				{
-					label: 'Reference',
-					autogenerate: { directory: 'reference' },
+					label: 'Reference Implementation',
+					autogenerate: { directory: 'relay' },
 				},
 			],
 		}),
