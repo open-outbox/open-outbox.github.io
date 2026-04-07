@@ -29,8 +29,8 @@ import { Card, CardGrid } from '@astrojs/starlight/components';
 		A specialized infrastructure component optimized for extreme query efficiency. It ensures **at-least-once delivery** by bridging your database and message brokers with atomic transactional integrity.
 	</Card>
 	<Card title="Database-Native Scaling" icon="setting">
-		Engineered for massive datasets. The architecture is optimized for **sub-millisecond coordination**, allowing multiple relay instances to scale horizontally without collisions or locking bottlenecks.
-	</Card>
+    Engineered for massive datasets. The architecture is optimized for **constant-time query performance**, allowing multiple relay instances to coordinate and scale horizontally without collisions—even on tables with millions of records.
+  </Card>
 	<Card title="Universal Egress" icon="external">
     Ready for any infrastructure. The relay features pluggable publishers for **Kafka, NATS, Redis, and RabbitMQ**, with a modular architecture that makes it easy to implement and plug in new publishers as needed.
   </Card>
@@ -42,9 +42,10 @@ import { Card, CardGrid } from '@astrojs/starlight/components';
 ---
 ## Performance by Design
 
-Open Outbox is engineered for minimal overhead. In our reference benchmarks:
-- **Sub-1ms** average query latency on tables with 10M+ records.
-- **Horizontal Scaling** tested with 20+ concurrent relay instances.
-- **Zero-Collision** event claiming under high-concurrency loads.
+Open Outbox is engineered for predictability and minimal overhead. In our reference benchmarks:
+
+- **Constant-Time Performance:** Query execution remains stable and efficient even as the outbox table grows to 100M+ records.
+- **Horizontal Scaling:** Proven coordination across multiple concurrent relay instances with **zero claim collisions**.
+- **Low-Latency Egress:** Optimized for high-throughput streaming from your database to any supported message broker.
 
 [View Full Benchmark Report →](/benchmarks/)
