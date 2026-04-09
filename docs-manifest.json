@@ -1,0 +1,81 @@
+{
+    "sync": [
+        {
+            "source": "external/spec/README.md",
+            "destination": "spec/index.md",
+            "title": "Overview",
+            "description": "The official Open Outbox specification.",
+            "order": 1
+        },
+        {
+            "source": "external/spec/docs/01-introduction.md",
+            "destination": "spec/introduction.md",
+            "title": "Introduction",
+            "description": "Overview of the Open Outbox pattern and goals.",
+            "order": 2
+        },
+        {
+            "source": "external/spec/docs/02-terminology-and-concepts.md",
+            "destination": "spec/terminology.md",
+            "title": "Terminology & Concepts",
+            "description": "Core definitions used throughout the specification.",
+            "order": 3
+        },
+        {
+            "source": "external/spec/docs/03-event-model.md",
+            "destination": "spec/event-model.md",
+            "title": "Event Model",
+            "description": "Structure and schema requirements for outbox events.",
+            "order": 4
+        },
+        {
+            "source": "external/spec/docs/04-delivery-semantics.md",
+            "destination": "spec/delivery-semantics.md",
+            "title": "Delivery Semantics",
+            "description": "Guarantees on at-least-once and exactly-once delivery.",
+            "order": 5
+        },
+        {
+            "source": "external/spec/docs/05-processing-lifecycle.md",
+            "destination": "spec/lifecycle.md",
+            "title": "Processing Lifecycle",
+            "description": "The journey of an event from store to publisher.",
+            "order": 6
+        },
+        {
+            "source": "external/spec/docs/06-store-contract.md",
+            "destination": "spec/store-contract.md",
+            "title": "Store Contract",
+            "description": "Requirements for outbox database implementations.",
+            "order": 7
+        },
+        {
+            "source": "external/spec/docs/07-publisher-contract.md",
+            "destination": "spec/publisher-contract.md",
+            "title": "Publisher Contract",
+            "description": "Interface requirements for message brokers.",
+            "order": 8
+        },
+        {
+            "source": "external/spec/docs/08-retries-and-failures.md",
+            "destination": "spec/error-handling.md",
+            "title": "Retries & Failures",
+            "description": "Strategies for handling transient and permanent errors.",
+            "order": 9
+        },
+        {
+            "source": "external/spec/docs/09-ordering-and-partitioning.md",
+            "destination": "spec/ordering.md",
+            "title": "Ordering & Partitioning",
+            "description": "Maintaining sequence across distributed systems.",
+            "order": 10
+        },
+        {
+            "source": "external/spec/docs/10-replay-and-operations.md",
+            "destination": "spec/operations.md",
+            "title": "Replay & Operations",
+            "description": "Operational concerns and manual event replaying.",
+            "order": 11
+        }
+    ]
+}

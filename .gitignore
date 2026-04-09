@@ -19,3 +19,8 @@ pnpm-debug.log*
 
 # macOS-specific files
 .DS_Store
+
+# Ignore the generated files
+# Generated Documentation
+src/content/docs/spec/
+src/content/docs/relay/
