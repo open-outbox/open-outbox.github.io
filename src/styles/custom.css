@@ -49,3 +49,13 @@ footer a[href*="edit"]:hover {
 footer a[href*="edit"] svg {
     display: none !important;
 }
+
+/* Hide the 'Overview' link in the Table of Contents */
+.right-sidebar a[href="#_top"] {
+    display: none !important;
+}
+
+/* Optional: If there's a gap left behind, you can adjust the list padding */
+.right-sidebar ul {
+    padding-top: 0;
+}
