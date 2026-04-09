@@ -4,7 +4,6 @@ import path from 'path';
 const MANIFEST_PATH = './spec-manifest.json';
 const OUTPUT_BASE = './src/content/docs';
 
-// Base URL for the "Edit this page" link pointing to the spec repo
 const REPO_BASE_URL = 'https://github.com/open-outbox/spec/edit/main';
 
 async function sync() {
@@ -30,17 +29,24 @@ async function sync() {
       let content = await fs.readFile(srcPath, 'utf-8');
 
       // --- 1. SMART LINK REWRITING ---
-      content = content.replace(/\[([^\]]+)\]\(([^)]+)\.md(.*?)\)/g, (match, text, link, anchor) => {
+      // Fixes nested pathing by using root-relative /spec/ links
+      content = content.replace(/\[([^\]]+)\]\(([^)]+)\.md\/?(.*?)\)/g, (match, text, link, anchor) => {
         if (link.startsWith('http')) return match;
+
+        // Get the filename (e.g., "03-event-model.md")
         const linkedFile = path.basename(link) + '.md';
+
         if (linkMap[linkedFile]) {
-          return `[${text}](./${linkMap[linkedFile]}${anchor})`;
+          // Clean up anchor: remove leading slash if it exists
+          const cleanAnchor = anchor.startsWith('/') ? anchor.substring(1) : anchor;
+          
+          // Use /spec/ to ensure links don't break when navigating from deep pages
+          return `[${text}](/spec/${linkMap[linkedFile]}${cleanAnchor})`;
         }
         return match;
       });
 
       // --- 2. DYNAMIC EDIT URL ---
-      // This converts "external/spec/docs/file.md" into ".../main/docs/file.md"
       const relativeSourcePath = entry.source.replace('external/spec/', '');
       const editUrl = `${REPO_BASE_URL}/${relativeSourcePath}`;
 
@@ -48,7 +54,7 @@ async function sync() {
       const frontmatter = [
         '---',
         `title: "${entry.title}"`,
-        `editUrl: "${editUrl}"`, // The magic link
+        `editUrl: "${editUrl}"`,
         `sidebar:`,
         `  order: ${entry.order || 99}`,
         entry.description ? `description: "${entry.description}"` : '',
@@ -63,10 +69,10 @@ async function sync() {
       await fs.ensureDir(path.dirname(destPath));
       await fs.writeFile(destPath, frontmatter + cleanContent);
       
-      console.log(`📑 Processed: ${entry.destination} (Edit: ${relativeSourcePath})`);
+      console.log(`Processed: ${entry.destination}`);
     }
 
-    console.log('\nSync complete! Edit links now point to the spec repo.');
+    console.log('\nSync complete! Internal links and Edit URLs are optimized.');
   } catch (err) {
     console.error('Sync failed:', err);
   }
