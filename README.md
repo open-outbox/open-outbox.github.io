@@ -45,4 +45,4 @@ This site is built with **Starlight**. Ensure you have [Node.js](https://nodejs.
 
 ## 📄 License
 
-This project—including all documentation and core source code—is licensed under the **MIT License**. See the `LICENSE` file for details.
+This project—including all documentation and core source code—is licensed under the **MIT License**. See the `[LICENSE](./LICENSE)` file for details.
