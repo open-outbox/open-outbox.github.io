@@ -1,12 +1,12 @@
-# 📦 OpenOutbox Documentation
+# 📦 Open Outbox Documentation
 
-This is the source code for the official **OpenOutbox** specification and documentation site, hosted at [openoutbox.dev](https://open-outbox.dev).
+This is the source code for the official **Open Outbox** specification and documentation site, hosted at [open-outbox.dev](https://open-outbox.dev).
 
 ---
 
 ## 🚀 About the Project
 
-**OpenOutbox** is a high-performance, language-agnostic standard for the Transactional Outbox Pattern. It ensures data consistency in distributed systems by atomizing database updates and event publishing.
+**Open Outbox** is a high-performance, language-agnostic standard for the Transactional Outbox Pattern. It ensures data consistency in distributed systems by atomizing database updates and event publishing.
 
 - **Spec Status**: Draft/Alpha
 - **Core Logic**: Go (Golang)
