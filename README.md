@@ -1,6 +1,6 @@
 # 📦 OpenOutbox Documentation
 
-This is the source code for the official **OpenOutbox** specification and documentation site, hosted at [openoutbox.dev](https://openoutbox.dev).
+This is the source code for the official **OpenOutbox** specification and documentation site, hosted at [openoutbox.dev](https://open-outbox.dev).
 
 ---
 
