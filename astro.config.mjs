@@ -11,7 +11,7 @@ export default defineConfig({
 		starlight({
 			title: 'Open Outbox',
 			customCss: ['./src/styles/custom.css'],
-			social: [{ icon: 'github', label: 'GitHub', href: 'https://open-outbox.github.io' }],
+			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/open-outbox/relay' }],
 			sidebar: [
 				{ label: 'Home', link: '/' },
   				{ label: 'Benchmarks', link: '/benchmarks/' },
