@@ -23,6 +23,7 @@ export default defineConfig({
 					label: 'Reference Implementation',
 					autogenerate: { directory: 'relay' },
 				},
+				{ label: 'Contribute', link: '/contribute/' },
 			],
 		}),
 	],
