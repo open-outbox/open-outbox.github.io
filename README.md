@@ -1,49 +1,48 @@
-# Starlight Starter Kit: Basics
+# 📦 OpenOutbox Documentation
 
-[![Built with Starlight](https://astro.badg.es/v2/built-with-starlight/tiny.svg)](https://starlight.astro.build)
+This is the source code for the official **OpenOutbox** specification and documentation site, hosted at [openoutbox.dev](https://openoutbox.dev).
 
-```
-npm create astro@latest -- --template starlight
-```
+---
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## 🚀 About the Project
 
-## 🚀 Project Structure
+**OpenOutbox** is a high-performance, language-agnostic standard for the Transactional Outbox Pattern. It ensures data consistency in distributed systems by atomizing database updates and event publishing.
 
-Inside of your Astro + Starlight project, you'll see the following folders and files:
+- **Spec Status**: Draft/Alpha
+- **Core Logic**: Go (Golang)
+- **Docs Engine**: Astro + Starlight
 
-```
-.
-├── public/
-├── src/
-│   ├── assets/
-│   ├── content/
-│   │   └── docs/
-│   └── content.config.ts
-├── astro.config.mjs
-├── package.json
-└── tsconfig.json
-```
+---
 
-Starlight looks for `.md` or `.mdx` files in the `src/content/docs/` directory. Each file is exposed as a route based on its file name.
+## 🛠️ Local Development
 
-Images can be added to `src/assets/` and embedded in Markdown with a relative link.
+This site is built with **Starlight**. Ensure you have [Node.js](https://nodejs.org/) installed.
 
-Static assets, like favicons, can be placed in the `public/` directory.
+### Commands
 
-## 🧞 Commands
+| Command | Action |
+| :--- | :--- |
+| `npm install` | Installs all dependencies |
+| `npm run dev` | Starts local dev server at `localhost:4321` |
+| `npm run build` | Builds the static site to `./dist/` |
+| `npm run preview` | Previews the production build locally |
 
-All commands are run from the root of the project, from a terminal:
+### Content Structure
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+- **Docs**: Edit or add files in `src/content/docs/` (Markdown/MDX).
+- **Assets**: Store images/diagrams in `src/assets/`.
+- **Config**: Navigation and site settings are in `astro.config.mjs`.
 
-## 👀 Want to learn more?
+---
 
-Check out [Starlight’s docs](https://starlight.astro.build/), read [the Astro documentation](https://docs.astro.build), or jump into the [Astro Discord server](https://astro.build/chat).
+## 🤝 Contributing
+
+1. **Create a Branch**: `git checkout -b docs/your-feature-name`
+2. **Commit Changes**: Use structured commit messages (e.g., `docs: add retry strategy section`).
+3. **Open a PR**: Target the `main` branch.
+
+---
+
+## 📄 License
+
+This project—including all documentation and core source code—is licensed under the **MIT License**. See the `LICENSE` file for details.
