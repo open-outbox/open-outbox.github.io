@@ -1,6 +1,0 @@
-[submodule "external/relay"]
-	path = external/relay
-	url = https://github.com/open-outbox/relay
-[submodule "external/spec"]
-	path = external/spec
-	url = https://github.com/open-outbox/spec
